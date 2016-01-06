@@ -1,21 +1,18 @@
 {
-    "name": "cakephp/bake",
+    "name": "lyft/joli-template",
     "description": "Bake plugin for CakePHP 3.0",
     "type": "cakephp-plugin",
     "keywords": ["cakephp", "bake"],
-    "homepage": "https://github.com/cakephp/bake",
+    "homepage": "https://github.com/lira92/JoliTemplate",
     "license": "MIT",
     "authors": [
         {
-            "name": "CakePHP Community",
-            "homepage": "https://github.com/cakephp/bake/graphs/contributors"
+            "name": "Alan Lira"
         }
     ],
     "support": {
-        "issues": "https://github.com/cakephp/bake/issues",
-        "forum": "http://stackoverflow.com/tags/cakephp",
-        "irc": "irc://irc.freenode.org/cakephp",
-        "source": "https://github.com/cakephp/bake"
+        "issues": "https://github.com/lira92/JoliTemplate/issues",
+        "source": "https://github.com/lira92/JoliTemplate"
     },
     "require": {
         "php": ">=5.4",
