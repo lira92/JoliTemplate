@@ -1,4 +1,4 @@
-<%
+<?php
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
@@ -9,25 +9,44 @@
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
- * @since         0.1.0
+ * @since         1.0.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-%>
+namespace Bake\Shell\Task;
+
+/**
+ * ShellHelper code generator.
+ */
+class FormTask extends SimpleBakeTask
+{
+    /**
+     * Task name used in path generation.
+     *
+     * @var string
+     */
+    public $pathFragment = 'Form/';
 
     /**
-     * Index method
-     *
-     * @return void
+     * {@inheritDoc}
      */
-    public function index()
+    public function name()
     {
-    $this->viewBuilder()->layout('admin');
-<% $belongsTo = $this->Bake->aliasExtractor($modelObj, 'BelongsTo'); %>
-<% if ($belongsTo): %>
-        $this->paginate = [
-            'contain' => [<%= $this->Bake->stringifyList($belongsTo, ['indent' => false]) %>]
-        ];
-<% endif; %>
-        $this->set('<%= $pluralName %>', $this->paginate($this-><%= $currentModelName %>));
-        $this->set('_serialize', ['<%= $pluralName %>']);
+        return 'form';
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function fileName($name)
+    {
+        return $name . 'Form.php';
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function template()
+    {
+        return 'Form/form';
+    }
+}

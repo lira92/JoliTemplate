@@ -29,6 +29,7 @@ $allAssociations = array_merge(
      */
     public function view($id = null)
     {
+        $this->viewBuilder()->layout('admin');
         $<%= $singularName%> = $this-><%= $currentModelName %>->get($id, [
             'contain' => [<%= $this->Bake->stringifyList($allAssociations, ['indent' => false]) %>]
         ]);
