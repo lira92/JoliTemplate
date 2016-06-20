@@ -1,6 +1,6 @@
 # Joli Template Bake plugin for CakePHP
 
-Não utilize este template em produção pois o mesmo ainda estão em desenvolvimento.
+Não utilize este template em produção pois o mesmo ainda está em desenvolvimento.
 
 ## Installation
 
